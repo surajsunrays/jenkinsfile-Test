@@ -6,7 +6,7 @@ pipeline {
       steps {
         script {
           echo "${env.JENKINS_HOME}"
-          sh 'mvn --version'
+          sh rm -rf "${env.JENKINS_HOME}"/testdir
         }
       }
     }
