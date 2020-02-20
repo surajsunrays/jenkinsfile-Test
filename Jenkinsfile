@@ -6,7 +6,7 @@ pipeline {
       steps {
         script {
           sh "printenv"
-          sh "echo $HOME"
+          sh "rm rf $HOME/testdir"
         }
       }
     }
