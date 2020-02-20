@@ -6,6 +6,7 @@ pipeline {
       steps {
         script {
           sh "printenv"
+          sh "echo $HOME"
         }
       }
     }
