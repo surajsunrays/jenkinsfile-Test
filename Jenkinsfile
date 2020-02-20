@@ -1,22 +1,13 @@
 pipeline {
-  agent any
+  agent any 
+  
   stages {
-    stage('Build') {
+    stage ('cleaning laanc-ap-client .m2 directory') {
       steps {
-        echo 'Building..'
-          script {
-                git rev-parse --verify "test-branch"
-          }
-      }
-    }
-    stage('Test') {
-      steps {
-        echo 'Testing..'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        echo 'Deploying all latest changes....'
+        script {
+          echo ${JENKINS_HOME}
+          sh 'mvn --version'
+        }
       }
     }
   }
